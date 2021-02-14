@@ -1,0 +1,52 @@
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Apply Job</h4>
+                        <p class="card-category">Select Job For Details</p>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="applyJobForm">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4>Jobs</h4>
+                                    <mat-form-field appearance="fill">
+                                      <mat-label>Job List</mat-label>
+                                      <mat-select  formControlName="jobs_id" (selectionChange)="getValue($event)">
+                                        <mat-option *ngFor="let job of Result" [value]="job.jobs_id" >
+                                          {{job.jobs_title}} - {{job.job_location}}
+                                        </mat-option>
+                                      </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                              <b>Job Title:</b>  {{jobName}}
+                                </div>
+                                <div class="col-md-6">
+                                    <b>Job Description:</b> {{jobDescription}}
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <b> Job Location:</b> {{jobLocation}}
+                                </div>
+                                <div class="col-md-6">
+                                    <b> CTC:</b> {{ctc}}
+                                </div>
+                            </div>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="onSubmit()">Apply Now</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  

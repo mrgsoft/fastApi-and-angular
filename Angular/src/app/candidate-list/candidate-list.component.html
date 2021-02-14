@@ -1,0 +1,56 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Candidate List</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Qualification
+                                    </th>
+                                    <th>
+                                        Current Ctc
+                                    </th>
+                                    <th>
+                                        Expected Ctc
+                                    </th>
+                                    <th>
+                                        Specialized Area
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of Result;">
+                                        <td>
+                                            {{item.name}}
+                                        </td>
+                                        <td>
+                                          {{item.qualification}}
+                                        </td>
+                                        <td>
+                                          {{item.current_ctc}}
+                                        </td>
+                                        <td>
+                                          {{item.expected_ctc}}
+                                        </td>
+                                        <td class="text-primary">
+                                          {{item.specialized_area}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
